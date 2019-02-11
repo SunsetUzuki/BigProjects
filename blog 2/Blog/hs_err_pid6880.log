@@ -1,0 +1,185 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 268435456 bytes for Failed to commit area from 0x00000006c0c00000 to 0x00000006d0c00000 of length 268435456.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/hotspot/src/os/windows/vm/os_windows.cpp:3357), pid=6880, tid=12852
+#
+# JRE version:  (9.0+11) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (9.0.1+11, mixed mode, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.1.4\lib\idea_rt.jar=4545:C:\Program Files\JetBrains\IntelliJ IDEA 2018.1.4\bin -Dfile.encoding=UTF-8 blog.BlogMvcApplication
+
+Host: Intel(R) Core(TM) i7-3820 CPU @ 3.60GHz, 8 cores, 15G,  Windows 7 , 64 bit Build 7601 (6.1.7601.17514)
+Time: Sun Sep 30 22:55:34 2018 Ainoi?iay Aa?iia (ceia) elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000000420800):  JavaThread "Unknown thread" [_thread_in_vm, id=12852, stack(0x00000000021c0000,0x00000000022c0000)]
+
+Stack: [0x00000000021c0000,0x00000000022c0000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5870b8]
+V  [jvm.dll+0x69c0ee]
+V  [jvm.dll+0x69d00a]
+V  [jvm.dll+0x69d643]
+V  [jvm.dll+0x21d148]
+V  [jvm.dll+0x584bf4]
+V  [jvm.dll+0x57a005]
+V  [jvm.dll+0x2cd46b]
+V  [jvm.dll+0x2cd3d3]
+V  [jvm.dll+0x2cd2a2]
+V  [jvm.dll+0x2cf2a3]
+V  [jvm.dll+0x319203]
+V  [jvm.dll+0x319916]
+V  [jvm.dll+0x319303]
+V  [jvm.dll+0x2adbf8]
+V  [jvm.dll+0x2aee37]
+V  [jvm.dll+0x67b1ed]
+V  [jvm.dll+0x67c5ac]
+V  [jvm.dll+0x3269c9]
+V  [jvm.dll+0x6653ee]
+V  [jvm.dll+0x391931]
+V  [jvm.dll+0x3938e1]
+C  [java.exe+0x34f1]
+C  [java.exe+0xe24f]
+C  [java.exe+0xe3f6]
+C  [kernel32.dll+0x1652d]
+C  [ntdll.dll+0x2c521]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000000000438000 GCTaskThread "GC Thread#0" [stack: 0x0000000002790000,0x0000000002890000] [id=12952]
+  0x0000000000439800 GCTaskThread "GC Thread#1" [stack: 0x0000000002930000,0x0000000002a30000] [id=11764]
+  0x000000000043b800 GCTaskThread "GC Thread#2" [stack: 0x0000000002a50000,0x0000000002b50000] [id=13108]
+  0x0000000000449000 GCTaskThread "GC Thread#3" [stack: 0x0000000002b60000,0x0000000002c60000] [id=8524]
+  0x000000000044a000 GCTaskThread "GC Thread#4" [stack: 0x0000000002d60000,0x0000000002e60000] [id=9328]
+  0x000000000044b000 GCTaskThread "GC Thread#5" [stack: 0x0000000002fb0000,0x00000000030b0000] [id=12824]
+  0x000000000044d800 GCTaskThread "GC Thread#6" [stack: 0x00000000030e0000,0x00000000031e0000] [id=12812]
+  0x000000000044e800 GCTaskThread "GC Thread#7" [stack: 0x0000000003290000,0x0000000003390000] [id=13244]
+  0x0000000003c29800 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000000069e0000,0x0000000006ae0000] [id=11816]
+  0x0000000003c2a000 ConcurrentGCThread "G1 Marker#0" [stack: 0x0000000006810000,0x0000000006910000] [id=7376]
+  0x0000000003c2c000 ConcurrentGCThread "G1 Marker#1" [stack: 0x0000000006bc0000,0x0000000006cc0000] [id=11448]
+  0x0000000003b51000 ConcurrentGCThread "G1 Refine#0" [stack: 0x00000000045d0000,0x00000000046d0000] [id=10328]
+  0x0000000003b50800 ConcurrentGCThread "G1 Refine#1" [stack: 0x0000000004300000,0x0000000004400000] [id=12936]
+  0x000000000046c800 ConcurrentGCThread "G1 Refine#2" [stack: 0x00000000041a0000,0x00000000042a0000] [id=12660]
+  0x000000000046b800 ConcurrentGCThread "G1 Refine#3" [stack: 0x0000000003fd0000,0x00000000040d0000] [id=11436]
+  0x000000000046b000 ConcurrentGCThread "G1 Refine#4" [stack: 0x0000000003ed0000,0x0000000003fd0000] [id=13276]
+  0x0000000000466000 ConcurrentGCThread "G1 Refine#5" [stack: 0x0000000002c60000,0x0000000002d60000] [id=13304]
+  0x0000000000465000 ConcurrentGCThread "G1 Refine#6" [stack: 0x0000000003ce0000,0x0000000003de0000] [id=10616]
+  0x0000000000461000 ConcurrentGCThread "G1 Refine#7" [stack: 0x0000000003a50000,0x0000000003b50000] [id=11556]
+  0x0000000003b5a000 ConcurrentGCThread "G1 Young RemSet Sampling" [stack: 0x00000000046f0000,0x00000000047f0000] [id=11132]
+
+=>0x0000000000420800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=12852, stack(0x00000000021c0000,0x00000000022c0000)]
+
+Threads with active compile tasks:
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000000000041df60] Heap_lock - owner thread: 0x0000000000420800
+
+Heap address: 0x00000006c0c00000, size: 4084 MB, Compressed Oops mode: Non-zero based: 0x00000006c0c00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x000000013f700000 - 0x000000013f73e000 	C:\Program Files\Java\jdk-9.0.1\bin\java.exe
+0x0000000077140000 - 0x00000000772e9000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000077020000 - 0x000000007713f000 	C:\Windows\system32\kernel32.dll
+0x000007fefd180000 - 0x000007fefd1eb000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefeb70000 - 0x000007fefec4b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefe6c0000 - 0x000007fefe75f000 	C:\Windows\system32\msvcrt.dll
+0x000007fefe870000 - 0x000007fefe88f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefee60000 - 0x000007fefef8d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000076f20000 - 0x000000007701a000 	C:\Windows\system32\USER32.dll
+0x000007fefe950000 - 0x000007fefe9b7000 	C:\Windows\system32\GDI32.dll
+0x000007fefe890000 - 0x000007fefe89e000 	C:\Windows\system32\LPK.dll
+0x000007fefeaa0000 - 0x000007fefeb69000 	C:\Windows\system32\USP10.dll
+0x000007fefb810000 - 0x000007fefba04000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefef90000 - 0x000007feff001000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefc150000 - 0x000007fefc15c000 	C:\Windows\system32\VERSION.dll
+0x000007fefe510000 - 0x000007fefe53e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefe760000 - 0x000007fefe869000 	C:\Windows\system32\MSCTF.dll
+0x0000000180000000 - 0x000000018003d000 	C:\Windows\system32\AvCNG.dll
+0x000007fefcfc0000 - 0x000007fefcfe2000 	C:\Windows\system32\bcrypt.dll
+0x000007fefcf40000 - 0x000007fefcfbe000 	C:\Program Files\Common Files\Avest\Avest CSP\avsspc.dll
+0x000007fec18d0000 - 0x000007fec19bf000 	C:\Program Files\Java\jdk-9.0.1\bin\msvcr120.dll
+0x000007fec1dd0000 - 0x000007fec1e76000 	C:\Program Files\Java\jdk-9.0.1\bin\msvcp120.dll
+0x0000000007a60000 - 0x0000000008484000 	C:\Program Files\Java\jdk-9.0.1\bin\server\jvm.dll
+0x000007feee5b0000 - 0x000007feee5b9000 	C:\Windows\system32\WSOCK32.dll
+0x000007feff010000 - 0x000007feff05d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefe940000 - 0x000007fefe948000 	C:\Windows\system32\NSI.dll
+0x000007fef9b20000 - 0x000007fef9b5b000 	C:\Windows\system32\WINMM.dll
+0x0000000077300000 - 0x0000000077307000 	C:\Windows\system32\PSAPI.DLL
+0x000007fef1db0000 - 0x000007fef1dbf000 	C:\Program Files\Java\jdk-9.0.1\bin\verify.dll
+0x000007fec7d50000 - 0x000007fec7d77000 	C:\Program Files\Java\jdk-9.0.1\bin\java.dll
+0x000007fec7da0000 - 0x000007fec7dca000 	C:\Program Files\Java\jdk-9.0.1\bin\instrument.dll
+0x000007fedc0a0000 - 0x000007fedc0b6000 	C:\Program Files\Java\jdk-9.0.1\bin\zip.dll
+0x000007feece60000 - 0x000007feece6a000 	C:\Program Files\Java\jdk-9.0.1\bin\jimage.dll
+0x000007fef1b00000 - 0x000007fef1c25000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.1.4\lib\idea_rt.jar=4545:C:\Program Files\JetBrains\IntelliJ IDEA 2018.1.4\bin -Dfile.encoding=UTF-8 
+java_command: blog.BlogMvcApplication
+java_class_path (initial): C:\Users\User\IdeaProjects\Blog\target\classes;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-devtools\2.0.5.RELEASE\spring-boot-devtools-2.0.5.RELEASE.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot\2.0.5.RELEASE\spring-boot-2.0.5.RELEASE.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.0.5.RELEASE\spring-boot-autoconfigure-2.0.5.RELEASE.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-thymeleaf\2.0.5.RELEASE\spring-boot-starter-thymeleaf-2.0.5.RELEASE.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter\2.0.5.RELEASE\spring-boot-starter-2.0.5.RELEASE.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.0.5.RELEASE\spring-boot-starter-logging-2.0.5.RELEASE.jar;C:\Users\User\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\User\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\User\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.10.0\log4j-to-slf4j-2.10.0.jar;C:\Users\User\.m2\repository\org\apache\logging\log4j\log4j-api\2.10.0\log4j-api-2.10.0.jar;C:\Users\User\.m2\repository\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;C:\Users\User\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;C:\Users\User\.m2\repository\org\yaml\snakeyaml\1.19\snakeyaml-1.19.jar;C:\Users\User\.m2\repository\org\thymeleaf\thymeleaf-spring5\3.0.9.RELEASE\thymeleaf-spring5-3.0.9.RELEASE.jar;C:\Users\User\.m2\repository\org\thymeleaf\extras\thymeleaf-extras-java8time\3.0.1.RELEASE\thymeleaf-extras-java8time-3.0.1.RELEASE.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.0.5.RELEASE\spring-boot-starter-web-2.0.5.RELEASE.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.0.5.RELEASE\spring-boot-starter-json-2.0.
+Launcher Type: SUN_STANDARD
+
+Logging:
+Log output configuration:
+#0: stdout all=warning uptime,level,tags
+#1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files (x86)\Avest\AvPCM_MNS;C:\Program Files\Git\cmd;C:\Program Files (x86)\Avest\AvPCM_nces;C:\Program files\Avest\AvPCMAlfa
+USERNAME=User
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 45 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.17514)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 45 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 16722472k(1350832k free), swap 20914556k(53840k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (9.0.1+11) for windows-amd64 JRE (9.0.1+11), built on Sep 28 2017 04:54:03 by "mach5one" with MS VC++ 12.0 (VS2013)
+
+END.

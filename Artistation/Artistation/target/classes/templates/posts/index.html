@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout::site-head">
+    <title>Spring MVC Blog</title>
+</head>
+
+<body>
+
+<header th:replace="layout::site-header"/>
+
+<h1 class="space">
+</h1>
+
+<a class="horizon" href="users/login.html" th:href="@{/users/login}"><img alt="Soul" width="300" height="300" th:src="@{/img/1.jpg}"/> </a>
+<a class="horizon" href="users/login.html" th:href="@{/users/login}"><img alt="Soul" width="300" height="300" th:src="@{/img/2.jpg}"/> </a>
+<a class="horizon" href="users/login.html" th:href="@{/users/login}"><img alt="Soul" width="300" height="300" th:src="@{/img/3.jpg}"/> </a>
+<a class="horizon" href="users/login.html" th:href="@{/users/login}"><img alt="Soul" width="300" height="300" th:src="@{/img/4.jpg}"/> </a>
+<a class="horizon" href="users/login.html" th:href="@{/users/login}"><img alt="Soul" width="300" height="300" th:src="@{/img/5.jpg}"/> </a>
+<a class="horizon" href="users/login.html" th:href="@{/users/login}"><img alt="Soul" width="300" height="300" th:src="@{/img/6.jpg}"/> </a>
+<a class="horizon" href="users/login.html" th:href="@{/users/login}"><img alt="Soul" width="300" height="300" th:src="@{/img/7.jpg}"/> </a>
+<a class="horizon" href="users/login.html" th:href="@{/users/login}"><img alt="Soul" width="300" height="300" th:src="@{/img/8.jpg}"/> </a>
+<a class="horizon" href="users/login.html" th:href="@{/users/login}"><img alt="Soul" width="300" height="300" th:src="@{/img/9.jpg}"/> </a>
+<a class="horizon" href="users/login.html" th:href="@{/users/login}"><img alt="Soul" width="300" height="300" th:src="@{/img/12.jpg}"/> </a>
+
+
+
+
+<article th:each="p : ${findAllposts}">
+
+
+    <a class="horizon" href="users/login.html" th:href="@{/users/login}"><img alt="Soul" width="300" height="300" th:src="${p.title}"/> </a>
+    <p class="content" th:utext="${p.body}">Description and Price: </p>
+    <a class="horizon" href="users/login.html" th:href="@{/users/login}"><img alt="Soul" width="300" height="300" th:src="${p.title}"/> </a>
+    <p class="content" th:utext="${p.body}">Description and Price: </p>
+
+
+</article>
+
+
+
+
+
+
+</main>
+
+Now is: <b th:text="${execInfo.now.time}"/>date and time</b>
+<footer th:replace="layout::site-footer"/>
+
+</body>
+
+</html>

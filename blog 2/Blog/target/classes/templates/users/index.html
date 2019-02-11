@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout::site-head">
+    <title>Spring MVC Blog</title>
+</head>
+
+<body>
+
+<header th:replace="layout::site-header"/>
+
+
+
+<article th:each="p : ${findAllusers}">
+
+    <h2 class="userName" th:text="${p.Id+') '+p.userName}">User name</h2>
+    <h3 class="fullName" th:text="${p.fullName}">Full name</h3>
+
+
+</article>
+
+</main>
+<h1>Welcome to Spring MVC</h1>
+Now is: <b th:text="${execInfo.now.time}"/>date and time</b>
+<footer th:replace="layout::site-footer"/>
+
+</body>
+
+</html>

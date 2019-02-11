@@ -1,0 +1,157 @@
+body > aside {
+
+    float: right;
+    width: 200px;
+    background: #CCC;
+    padding: 15px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+body > aside h2 {
+    margin: 5px 0px 15px 0px;
+
+}
+
+body > aside a {
+
+    display: block;
+    margin: 5px 0px;
+    text-decoration: none;
+
+}
+
+body > main:after {
+
+    content: '';
+    display: block;
+    clear: both;
+}
+
+body > header {
+
+    background: white;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: -18px;
+    padding: 30px;
+    font: 20px "Helvetica Neue LT Cyrillic 45 L";
+    color: darkgrey;
+
+}
+
+body {
+
+    display: inline;
+    background-color: black;
+    background-image: url(../img/bg5.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-position-y: 105px;
+}
+
+A {
+    color: darkgrey;
+    text-decoration: none;
+}
+
+A:visited {
+    color: darkgrey;
+    text-decoration: none;
+}
+
+A:active {
+    color: darkgrey;
+    text-decoration: none;
+}
+
+body > header > a > img, body.header a {
+
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px 60px;
+    font-size: 1.2em;
+}
+
+body > footer {
+
+    position: absolute;
+
+    width: 100%;
+    background: white;
+    padding: 5px;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: -8px;
+    text-align: center;
+    color: darkgrey;
+    font: 14px "Helvetica Neue LT Cyrillic 45 L";
+
+}
+.content{
+    font: 14px "Helvetica Neue LT Cyrillic 45 L";
+    color: white;
+}
+.space2{
+    margin-left: 35%;
+    font: 14px "Helvetica Neue LT Cyrillic 45 L";
+    color: white;
+}
+.horizon{
+    display: inline;
+}
+
+.firstStyleText {
+    color: white;
+    font: 20px "Helvetica Neue LT Cyrillic 45 L";
+
+}
+
+.secondStyleText {
+    color: darkgrey;
+    font: 20px "Helvetica Neue LT Cyrillic 45 L";
+
+}
+
+.space {
+    margin-top: 27%;
+    color: white;
+    position: center;
+    margin-left: 45%;
+    font: 20px "Helvetica Neue LT Cyrillic 45 L";
+}
+
+#logged-in-info {
+    float: right;
+    margin-top: 18px;
+}
+
+#logged-in-info form {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: -20px;
+}
+
+ul#messages li {
+    display: block;
+    width: 80%;
+    margin: 5px auto;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+ul#messages li.info {
+    background: #7f7;
+}
+
+ul#messages li.error {
+    background: #d00;
+    color: white;
+}
+
+.formError {
+    color: red;
+    font-style: italic;
+}

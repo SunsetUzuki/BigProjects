@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout::site-head">
+
+    <title>Create new post</title>
+</head>
+
+<body>
+<header th:replace="layout::site-header"/>
+
+
+
+
+
+
+
+<form class="space" method="post" th:object="${addIllustrationForm}">
+    <h1>Load new illustration</h1>
+    <div>
+        <label for="title">Url of Art</label>
+    </div>
+    <input id="title" type="text" name="title" th:value="*{title}"/>
+
+    <div>
+        <label for="body" th:value="*{title}">Art Info</label></div>
+    <input id="body" type="body" name="body" th:value="*{body}"/>
+
+    <div><input type="submit" value="Create"/>
+        <a href="index.html" th:href="@{/}">Go to Home</a>
+    </div>
+</form>
+
+
+<footer th:replace="layout::site-footer"/>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<head th:fragment="site-head">
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="../public/css/styles.css" th:href="@{/css/styles.css}"/>
+    <link rel="icon" href="../public/img/icon2.ico" th:href="@{/img/icon2.ico}"/>
+    <script src="../public/js/jquery-3.3.1.min.js" th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script src="../public/js/blog-scripts.js" th:src="@{/js/art-scripts.js}"></script>
+
+</head>
+<body>
+<header th:fragment="site-header" th:remove="tag">
+    <header>
+         <a href="index.html" th:href="@{/}"><img src="../public/img/logo3.png" th:src="@{/img/logo3.png}"/> </a>
+    <a href="index.html" th:href="@{/}">News</a>
+    <a href="posts/index.html" th:href="@{/posts}">ArtWorks</a>
+    <a href="posts/create.html" th:href="@{/posts/create}">Add Illustration</a>
+    <a href="users/login.html" th:href="@{/users/login}"><img src="../public/img/Cart.png" th:src="@{/img/Cart.png}"/></a>
+        <a href="users/login.html" th:href="@{/users/login}">Login</a>
+        <a href="users/register.html" th:href="@{/users/register}">Register</a>
+
+
+    <div id="logged-in-info">
+
+        <form method="post" th:action="@{/}">
+            <input type="submit" value="Logout"/>
+
+        </form>
+    </div>
+</header>
+
+    <ul id="messages" th:with="notifyMessages=${session[T(art.services.NotificationServiceImpl).NOTIFY_MSG_SESSION_KEY]}">
+        <li th:each="msg: ${notifyMessages}" th:text="${msg.text}"
+            th:class="${#strings.toLowerCase(msg.type)}">
+
+        </li>
+        <span th:if="${notifyMessages}" th:remove="all" th:text="${#session.removeAttribute(T(art.services.NotificationServiceImpl).NOTIFY_MSG_SESSION_KEY)}">
+
+        </span>
+    </ul>
+</header>
+<footer th:fragment="site-footer">
+    &copy;ArtiStation, 2018</span>
+
+</footer>
+</body>
+</html>

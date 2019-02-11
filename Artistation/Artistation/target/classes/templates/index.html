@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout::site-head">
+    <title>Artistation</title>
+</head>
+
+<body>
+
+<header th:replace="layout::site-header"/>
+
+
+<main id="posts">
+
+
+    <h1 class="space">
+    </h1>
+    <article th:each="p : ${latest5posts}">
+
+        <img class="space2" width="400" height="400" th:src="${p.title}"/>
+        <div class="space2">
+            <i>New art added to the shop on</i>
+            <span th:text="${#dates.format(p.date, 'dd-MM-yyyy')}">22-May-2016</span>
+
+        </div>
+        <p class="space2" th:utext="${p.body}">Description and Price: </p>
+
+    </article>
+
+</main>
+<h1>Welcome to Spring MVC</h1>
+Now is: <b th:text="${execInfo.now.time}"/>date and time</b>
+<footer th:replace="layout::site-footer"/>
+
+</body>
+
+</html>
